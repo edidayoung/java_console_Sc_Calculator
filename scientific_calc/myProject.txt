@@ -1,0 +1,147 @@
+
+
+import java.sql.SQLOutput;
+import java.util.*;
+
+public class Calculator {
+    int a , b;
+    Scanner sc = new Scanner(System.in);
+    int addition()
+    {
+         System.out.println("Enter two numbers to Add :");
+         a = sc.nextInt();
+         b = sc.nextInt();
+         return (a+b);
+    }
+    int subtraction()
+    {
+        System.out.println("Enter two numbers to Subtract :");
+        a = sc.nextInt();
+        b = sc.nextInt();
+        return (a-b);
+    }
+    int division()
+    {
+        System.out.println("Enter two numbers to Division :");
+        a = sc.nextInt();
+        b = sc.nextInt();
+        return (a/b);
+    }
+    int multiplication()
+    {
+        System.out.println("Enter two numbers to Multiply :");
+        a = sc.nextInt();
+        b = sc.nextInt();
+        return (a*b);
+    }
+    void standard()
+    {
+        System.out.println("1. Addition");
+        System.out.println("2. Subtraction");
+        System.out.println("3. Division");
+        System.out.println("4. Multiply");
+        System.out.println("5. Exit Standard calculator");
+        System.out.println("Choose your operation: ");
+        int choice = sc.nextInt();
+
+        int ans = 0;
+        switch (choice) {
+            case 1:
+                ans = addition();
+                break;
+            case 2:
+                ans = subtraction();
+                break;
+            case 3:
+                ans = multiplication();
+                break;
+            case 4:
+                ans = division();
+                break;
+            default:
+                System.out.println("Wrong Selection");
+        }
+        System.out.println("Answer is = "+ans);
+
+
+    }
+    void Trigonometry()
+    {
+        System.out.println("1. Sine");
+        System.out.println("2. Cosine");
+        System.out.println("2. asine");
+        System.out.println("2. acos");
+        System.out.println("2. atan");
+        
+    }
+    void scientific()
+    {
+        System.out.println("1. Power");
+        System.out.println("2. Square");
+        System.out.println("3. Cube");
+        System.out.println("4. Square root");
+        System.out.println("5. Round");
+        System.out.println("6. Ceiling");
+        System.out.println("7. Floor");
+        System.out.println("8. Minimum Value");
+        System.out.println("9. Max Value");
+    }
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        Calculator obj = new Calculator();
+        System.out.println("1. Standard Calculator");
+        System.out.println("2. Scientific Calculator");
+        System.out.println("3. Trigonometric Calculator");
+        System.out.println("Please Choose a calculator: ");
+        int choice = s.nextInt();
+        switch(choice)
+        {
+            case 1:obj.standard();
+                    break;
+            case 2:obj.scientific();
+                    break;
+            case 3:obj.Trigonometry();
+                    break;
+
+            default:
+                System.out.println("Wrong Input");
+        }
+        }
+
+ARMSTRONG CODE NEW:
+int num, number, temp, total = 0;
+                    System.out.println("Enter at Least 3 digit number: ");
+                    num =sc.nextInt();
+                    number = num;
+                    for(; number!=0; number /= 10){
+                        temp = number % 10;
+                        total = total + temp*temp*temp;
+                    }
+                    if(total== num)
+                        System.out.println(num+" is an Armstrong Number.");
+                    else
+                        System.out.println(num+" is not an Armstrong Number");
+ARMSTRONG CODE OLD:
+int n, count =0, a, b, c, sum =0;
+n = sc.nextInt();
+                    a = n;
+                    c = n;
+                    while(a > 0)
+                    {
+                        a = a / 10;
+                        count++;
+                    }
+                    while(n > 0)
+                    {
+                        b = n % 10;
+                        sum = (int)(sum+Math.pow(b, count));
+                        n = n / 10;
+                    }
+                    if (sum == c)
+                    {
+                        System.out.println(TEXT_YELLOW+sum+ " is an Armstrong Number."+ TEXT_RESET);
+                    }
+                    else{
+                        System.out.println(TEXT_YELLOW+"Given number is not an Armstrong Number."+ TEXT_RESET);
+                    }
+
